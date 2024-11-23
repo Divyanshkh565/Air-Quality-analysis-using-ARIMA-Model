@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./cities.js"></script>
+    <title>Air Pollution Indicator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Montserrat:wght@700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 font-Poppins">
+    <div class="container mx-auto p-5">
+      <h1 class="text-4xl font-bold text-center mb-6">
+        Air Pollution Indicator
+      </h1>
+
+      <div class="bg-white shadow-md rounded-lg p-5 mb-6 text-lg">
+        <h2 class="text-2xl font-semibold mb-4">Your Location :</h2>
+        <div class="flex flex-col gap-5">
+        <div class="flex justify-center items-center gap-5">
+        <div class="w-fit">
+          <select
+            onchange="print_city('state', this.selectedIndex);"
+            id="sts"
+            name="stt"
+            class="form-control"
+            required
+          ></select>
+        </div>
+        <div class="w-fit">
+          <select id="state" class="form-control" required></select>
+        </div>
+        <script language="javascript">
+          print_state("sts");
+        </script>
+        </div>
+        <div class="w-full flex justify-center items-center"><button
+          onclick="getData()"
+          class="search-btn bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-5">
+        <h2 class="text-2xl font-semibold mb-4">Air Quality Index :</h2>
+        <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
+
+      </div>
+        <!-- <span class="air-quality text-3xl font-bold">...</span>
+        <span class="arr">&nbsp;&rarr;&nbsp;</span>
+        <span class="air-quality-status">...</span>
+
+        <div class="component-container mt-4">
+          <h2 class="text-xl font-semibold mb-2">
+            Concentration of pollutants in air :
+          </h2>
+
+          <div class="mb-2">
+            <h3 class="component-names font-medium">Carbon Monoxide :</h3>
+            <span class="component-val" data-comp="co"></span>
+          </div>
+          <div class="mb-2">
+            <h3 class="component-names font-medium">Nitrogen Monoxide :</h3>
+            <span class="component-val" data-comp="no"></span>
+          </div>
+          <div class="mb-2">
+            <h3 class="component-names font-medium">Nitrogen Dioxide :</h3>
+            <span class="component-val" data-comp="no2"></span>
+          </div>
+          <div class="mb-2">
+            <h3 class="component-names font-medium">Ozone :</h3>
+            <span class="component-val" data-comp="o3"></span>
+          </div>
+          <div class="mb-2">
+            <h3 class="component-names font-medium">Sulphur Dioxide :</h3>
+            <span class="component-val" data-comp="so2"></span>
+          </div>
+          <div class="mb-2">
+            <h3 class="component-names font-medium">Fine particles matter :</h3>
+            <span class="component-val" data-comp="pm2_5"></span>
+          </div>
+          <div class="mb-2">
+            <h3 class="component-names font-medium">
+              Coarse particulate matter :
+            </h3>
+            <span class="component-val" data-comp="pm10"></span>
+          </div>
+          <div class="mb-2">
+            <h3 class="component-names font-medium">Ammonia :</h3>
+            <span class="component-val" data-comp="nh3"></span>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white text-center py-8">
+      <h4 class="text-2xl font-semibold mb-4">About Us</h4>
+      <p>
+        Team 3:<br />Divyansh Khowal <br />
+        Prakhar Gupta <br />
+        <span class="text-sm"
+          >"Trying to spread awareness in the world about Air Quality by their
+          Indexes measure."</span
+        >
+      </p>
+      <p class="mt-6">Contact Us:</p>
+      <p>dk3893@srmist.edu.in</p>
+      <p>ps8842@srmist.edu.in</p>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
